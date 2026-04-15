@@ -8,6 +8,9 @@ public class CellPhoneApplication {
         CellPhone phone2 = new CellPhone();
         Scanner scanner = new Scanner(System.in);
 
+        newPhone(scanner, phone1);
+        newPhone(scanner, phone2);
+
         System.out.println("Please enter phone information:");
         System.out.print("Serial Number: ");
         int serialNumber = scanner.nextInt();
@@ -22,9 +25,6 @@ public class CellPhoneApplication {
         String owner = scanner.nextLine();
 
         CellPhone phone3 = new CellPhone(serialNumber, model, carrier, phoneNumber, owner);
-
-        newPhone(scanner, phone1);
-        newPhone(scanner, phone2);
 
         display(phone1);
         display(phone2);
